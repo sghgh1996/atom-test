@@ -1,5 +1,5 @@
 <template>
-  <section class="v-flex v-flex-justify-center">
+  <section class="d-flex justify-content-center">
     <p class="intro-text">
       Zerogrey is a et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti et quas  excepturi sint occaecati cupiditate non provident.
     </p>

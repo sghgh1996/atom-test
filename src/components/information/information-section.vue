@@ -4,15 +4,24 @@
     <div class="circle circle-medium" />
     <b-container fluid>
       <b-row>
-        <b-col :cols="12" :lg="3" class="information-title">
-          <h2>How can we help your business?</h2>
-          <b-button
-            variant="outline-primary"
-            class="curve-button curve-button-blue-empty v-mt-3"
-          >Discover our services</b-button>
+        <b-col :cols="12" :lg="4">
+          <div class="information-title">
+            <h2>How can we help your business?</h2>
+            <b-button
+              variant="outline-primary"
+              class="curve-button curve-button-blue-empty v-mt-3"
+            >Discover our services</b-button>
+          </div>
         </b-col>
-        <b-col :cols="12" :lg="9">
-
+        <b-col :cols="12" :lg="8">
+          <template v-for="(information, index) in informations">
+            <information-row
+              :key="index"
+              :title="information.title"
+              :text="information.text"
+              :number="index + 1"
+            />
+          </template>
         </b-col>
       </b-row>
     </b-container>
@@ -20,8 +29,32 @@
 </template>
 
 <script>
+import informationRow from './information-row.vue'
+
 export default {
-  
+  components: { informationRow },
+  data () {
+    return {
+      informations: [
+        {
+          title: 'Merchant of records',
+          text: 'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, sed quia empora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.'
+        },
+        {
+          title: 'Operations',
+          text: 'Nequempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.'
+        },
+        {
+          title: 'Marketing & Sales',
+          text: 'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.'
+        },
+        {
+          title: 'Store Management',
+          text: 'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.'
+        }
+      ],
+    }
+  },
 }
 </script>
 
@@ -55,7 +88,10 @@ export default {
     .information-title {
       margin-top: 65px;
       margin-left: 10px;
-      max-width: 275px;
+
+      h2 {
+        max-width: 275px;
+      }
     }
 
     @media (min-width: 992px) {
@@ -81,11 +117,11 @@ export default {
 
       .information-title {
         margin-top: 470px;
-        margin-left: 50px;
-        max-width: 340px;
+        padding-left: 50px;
 
         h2 {
           font-size: 48px;
+          max-width: 340px;
         }
       }
     }

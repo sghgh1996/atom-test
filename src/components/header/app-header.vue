@@ -1,5 +1,5 @@
 <template>
-  <header class="c-app-header v-flex v-flex-justify-space-between">
+  <header class="c-app-header d-flex justify-content-between">
     <logo-icon />
     <div class="header-nav">
       <a href="#" class="d-none d-lg-inline-block">Works</a>

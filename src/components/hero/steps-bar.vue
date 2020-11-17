@@ -2,7 +2,7 @@
   <div class="c-steps-bar">
     <div class="steps-line" />
     <div class="first-step-circle" />
-    <div class="v-flex v-flex-justify-space-between">
+    <div class="d-flex justify-content-between">
       <div 
         v-for="n in 5" 
         :key="n"

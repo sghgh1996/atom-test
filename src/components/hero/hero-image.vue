@@ -1,7 +1,7 @@
 <template>
   <div class="c-hero-image">
     <div class="background-circle" />
-    <div class="image-content v-flex v-flex-column v-flex-align-center">
+    <div class="image-content">
       <img src="../../assets/img/hero-image.jpg" />
       <steps-bar />
     </div>

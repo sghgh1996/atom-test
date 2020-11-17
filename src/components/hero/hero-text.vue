@@ -1,5 +1,5 @@
 <template>
-  <div class="c-hero-text v-flex v-flex-column v-flex-align-start">
+  <div class="c-hero-text d-flex flex-column align-items-start">
     <h1>
       Performance without compromises
     </h1>
@@ -10,8 +10,8 @@
       variant="outline-primary"
       class="curve-button curve-button-blue-empty v-mt-3 v-mb-5-lg"
     >Discover</b-button>
-    <div class="v-flex-align-self-end v-font-24 v-mt-2 v-mt-5-lg">Blumarine</div>
-    <div class="gray-text v-flex-align-self-end v-font-12">Front end, Design UX/UI</div>
+    <div class="align-self-end v-font-24 v-mt-2 v-mt-5-lg">Blumarine</div>
+    <div class="gray-text align-self-end v-font-12">Front end, Design UX/UI</div>
   </div>
 </template>
 
